@@ -1,0 +1,104 @@
+.is-padding-8 {
+  padding: 1rem;
+}
+.has-background-custom {
+  background-color: #f2f5f7;
+}
+.is-slate-blue {
+  background-color: SlateBlue;
+  color: white;
+}
+.is-slate-blue:hover {
+  color: white;
+  border-color: transparent;
+}
+.has-text-custom {
+  color: SlateBlue;
+}
+.has-border-light {
+  border: 1px solid lightgrey;
+  /*box-shadow: 2px 1px #888888;*/
+}
+.footer-title {
+  padding-bottom: 0.5rem;
+}
+
+/* Toggle Switch - https://www.w3schools.com/howto/howto_css_switch.asp */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(34px);
+  -ms-transform: translateX(34px);
+  transform: translateX(34px);
+}
+
+/* Rounded sliders */
+.slider.is-rounded {
+  border-radius: 24px;
+}
+
+.slider.is-rounded:before {
+  border-radius: 50%;
+}
+
+/* Divider with text */
+.divider {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  /*color: rgba(0, 0, 0, 0.35);*/
+  margin: 8px 0px;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.15);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
+}

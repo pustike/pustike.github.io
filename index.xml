@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Simple Online Accounting Software on ShriBooks</title>
+    <link>/</link>
+    <description>Recent content in Simple Online Accounting Software on ShriBooks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Importance of Accounting</title>
+      <link>/blog/importance-of-accounting/</link>
+      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/importance-of-accounting/</guid>
+      <description>&lt;p&gt;The importance of financial accounting practices is well known and majority of businesses have well established processes to record, summarize and analyze the historical and prospective information. Financial data is not only required to fulfill legal &amp;amp; tax reporting obligations but it also provides an overview of operational performance through management reporting, that helps to make informed business decisions.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>About Us</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>ShriBooks is an online accounting system, providing a cost-effective way to manage accounting needs of growing businesses. Professionals and Small/Medium Businesses performing financial transactions need to maintain accounting data for statutory reporting and statistical analysis. ShriBooks aims to provide such features to easily record and analyze data in a collaborative way, so that customers can focus more on their core expertise to grow their business.
+We are based in Bengaluru, with a core team having experience of developing ERP application which is successfully implemented in many countries like Singapore, Malaysia, etc.</description>
+    </item>
+    
+    <item>
+      <title>Cookie Policy</title>
+      <link>/cookie-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/cookie-policy/</guid>
+      <description>ShriBooks Pvt Ltd (“ShriBooks”, “us”, “we”, or “our”) operates the ShriBooks website and the ShriBooks APIs (collectively, the “Service”). By using the Service, you consent to the use of cookies.
+Our Cookie Policy explains what cookies are, how we use cookies, how third-parties we may partner with may use cookies on the Service, your choices regarding cookies and further information about cookies.
+What are cookies Cookies are small pieces of text sent to your web browser by a website you visit.</description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/privacy-policy/</guid>
+      <description>ShriBooks Pvt Ltd (“ShriBooks”, “us”, “we”, or “our”) operates the ShriBooks website and the ShriBooks APIs (collectively, the “Service”).
+This page informs you of our policies regarding the collection, use and disclosure of Personal Information when you use our Service. We will not use or share your information with anyone except as described in this Privacy Policy.
+We use your Personal Information for providing and improving the Service. By using the Service, you agree to the collection and use of information in accordance with this policy.</description>
+    </item>
+    
+    <item>
+      <title>Terms of Service</title>
+      <link>/terms-of-service/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/terms-of-service/</guid>
+      <description>These Terms of Service (“Terms”) govern your relationship with the ShriBooks website and the ShriBooks APIs (the “Service”) operated by ShriBooks Pvt Ltd (“ShriBooks”, “us”, “we”, or “our”).
+Please read these Terms of Service carefully before using the Service.These Terms apply to all visitors, users and others who access or use the Service. By accessing or using the Service you agree to be bound by these Terms. If you disagree with any part of these Terms, then you may not access the Service.</description>
+    </item>
+    
+  </channel>
+</rss>
