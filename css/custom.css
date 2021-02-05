@@ -1,6 +1,3 @@
-.is-padding-8 {
-  padding: 1rem;
-}
 .has-background-custom {
   background-color: #f2f5f7;
 }
@@ -18,9 +15,6 @@
 .has-border-light {
   border: 1px solid lightgrey;
   /*box-shadow: 2px 1px #888888;*/
-}
-.footer-title {
-  padding-bottom: 0.5rem;
 }
 
 /* Toggle Switch - https://www.w3schools.com/howto/howto_css_switch.asp */
