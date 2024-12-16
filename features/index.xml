@@ -4,8 +4,9 @@
     <title>Features on ShriBooks</title>
     <link>/features/</link>
     <description>Recent content in Features on ShriBooks</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright><atom:link href="/features/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.</copyright>
+    <atom:link href="/features/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -19,10 +19,95 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// THEMES
+const STORAGE_KEY = "bulma-theme";
+const SYSTEM_THEME = "system";
+const DEFAULT_THEME = "light";
+
+const state = {
+  chosenTheme: SYSTEM_THEME, // light|dark|system
+  appliedTheme: DEFAULT_THEME, // light|dark
+  OSTheme: null, // light|dark|null
+};
+
+const updateThemeUI = () => {
+  const isLightTheme = state.appliedTheme === "light";
+  const themeIcon = document.getElementById("theme-icon");
+  themeIcon.classList.remove("has-text-link", "has-text-warning");
+  themeIcon.classList.add(isLightTheme ? "has-text-warning" : "has-text-link");
+  const themeHtml = "<i class=\"fas fa-sun\"></i>"
+  themeIcon.children[0].innerHTML = isLightTheme ? themeHtml : themeHtml.replace("sun", "moon");
+  // $themeCycle.setAttribute("data-icon", isLightTheme ? "sun" : "moon"); // on an svg
+  // $themeCycle.classList.remove("fa-sun", "fa-moon");
+  // $themeCycle.classList.add(isLightTheme ? "fa-sun" : "fa-moon");
+};
+
+const setTheme = (theme, save = true) => {
+  state.chosenTheme = theme;
+  state.appliedTheme = theme;
+  if (theme === SYSTEM_THEME) {
+    state.appliedTheme = state.OSTheme;
+    document.documentElement.removeAttribute("data-theme");
+    window.localStorage.removeItem(STORAGE_KEY);
+  } else {
+    document.documentElement.setAttribute("data-theme", theme);
+    if (save) {
+      window.localStorage.setItem(STORAGE_KEY, theme);
+    }
+  }
+  updateThemeUI();
+};
+
+const toggleTheme = () => {
+  if (state.appliedTheme === "light") {
+    setTheme("dark");
+  } else {
+    setTheme("light");
+  }
+};
+
+const detectOSTheme = () => {
+  if (!window.matchMedia) {
+    // matchMedia method not supported
+    return DEFAULT_THEME;
+  }
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    // OS theme setting detected as dark
+    return "dark";
+  } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+    return "light";
+  }
+  return DEFAULT_THEME;
+};
+
+// On load, check if any preference was saved
+window.addEventListener('load', () => {
+  const localTheme = window.localStorage.getItem(STORAGE_KEY);
+  state.OSTheme = detectOSTheme();
+  if (localTheme) {
+    setTheme(localTheme, false);
+  } else {
+    setTheme(SYSTEM_THEME);
+  }
+  // Event listeners
+  const $themeSwitchers = document.querySelectorAll(".js-themes .navbar-item");
+  $themeSwitchers.forEach((el) => {
+    el.addEventListener("click", () => {
+      const theme = el.dataset.scheme;
+      setTheme(theme);
+    });
+  });
+});
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
+  const theme = event.matches ? "dark" : "light";
+  state.OSTheme = theme;
+  setTheme(theme);
+});
+
 function onBillingPlanChange(yearlyBilling) {
-  let monthlyStarterPlan = '250</span><br/>Per Month', yearlyStarterPlan = '2,500</span><br/>Per Year';
-  let monthlyStandardPlan = '500</span><br/>Per Company / Month', yearlyStandardPlan = '5,000</span><br/>Per Company / Year';
-  let priceAmountSpan = '<span class="plan-price-amount"><span class="plan-price-currency">₹</span>';
-  document.getElementById('starter-plan').innerHTML = priceAmountSpan + (yearlyBilling ? yearlyStarterPlan : monthlyStarterPlan);
-  document.getElementById('standard-plan').innerHTML = priceAmountSpan + (yearlyBilling ? yearlyStandardPlan : monthlyStandardPlan);
+  document.getElementById('starter-plan').innerHTML = yearlyBilling ? '2,500' : '250';
+  document.getElementById('standard-plan').innerHTML = yearlyBilling ? '5,000' : '500';
+  document.getElementById('starter-plan-txt').innerHTML = yearlyBilling ? 'Per Year' : 'Per Month';
+  document.getElementById('standard-plan-txt').innerHTML = yearlyBilling ? 'Per Company / Year' : 'Per Company / Month';
 }

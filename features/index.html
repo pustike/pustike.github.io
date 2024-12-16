@@ -21,7 +21,7 @@
             <img src="/images/navbar-logo.png">
           </a>
           <a class="navbar-item is-paddingless" href="/">
-            <strong class="is-size-4 has-text-link">ShriBooks</strong>
+            <strong class="is-size-4">ShriBooks</strong>
           </a>
           <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
             <span aria-hidden="true"></span>
@@ -34,7 +34,6 @@
             <div class="navbar-item is-hidden-touch"></div>
             <a class="navbar-item" href="/features">Features</a>
             <a class="navbar-item" href="/pricing">Pricing</a>
-            <a class="navbar-item" href="/blog">Blog</a>
             <a class="navbar-item" href="/about">About</a>
           </div>
           <div class="navbar-end">
@@ -44,13 +43,29 @@
                 <a class="button is-link" href="https://app.shribooks.com/#!/login">Login</a>
               </div>
             </div>
+            <div class="navbar-item has-dropdown is-hoverable is-hidden-touch">
+              <a class="navbar-link is-arrowless">
+                <span id="theme-icon" class="icon has-text-warning"><i></i></span>
+              </a>
+              <div class="navbar-dropdown is-boxed js-themes">
+                <a class="navbar-item" data-scheme="light">
+                  <span class="icon has-text-warning"><i class="fas fa-sun"></i></span>Light
+                </a>
+                <a class="navbar-item" data-scheme="dark">
+                  <span class="icon has-text-link"><i class="fas fa-moon"></i></span>Dark
+                </a>
+                <a class="navbar-item" data-scheme="system">
+                  <span class="icon has-text-primary"><i class="fas fa-desktop"></i></span>System
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </nav>
     <div class="p-4">
       <div class="container">
-        <div class="has-text-grey-dark has-text-centered">
+        <div class="has-text-centered">
           <br/>
           <p class="title is-3 is-marginless">Features to maintain your accounting records</p>
           <p class="mx-2 my-2">Record transactions and access reports with simple and intuitive user interface</p>
@@ -157,7 +172,7 @@
       </div>
     </div>
     <br/>
-    <footer class="footer is-paddingless has-background-light">
+    <footer class="footer is-paddingless">
       <div class="container">
         <div class="columns is-tablet mx-2 my-2">
           <div class="column is-2">
@@ -170,15 +185,9 @@
           <div class="column is-3">
             <h6 class="title is-6 is-marginless pb-2">Community</h6>
             <p>
-              <a href="/blog">
-                <span class="icon is-small has-text-danger"><i class="fas fa-rss"></i></span>
-                Blog / News
-              </a>
-            </p>
-            <p>
-              <a href="https://twitter.com/ShriBooks" target="_blank" title="Follow @ShriBooks">
-                <span class="icon is-small has-text-info"><i class="fab fa-twitter"></i></span>
-                Follow @ShriBooks
+              <a href="https://github.com/pustike" target="_blank" title="Pustike @ GitHub">
+                <span class="icon is-small has-text-info"><i class="fab fa-github"></i></span>
+                Pustike @ GitHub
               </a>
             </p>
           </div>
@@ -190,7 +199,7 @@
           |
           <a href="/cookie-policy">Cookie Policy</a>
         </div>
-        <p class="has-text-centered">Copyright 2020-2021 &copy; ShriBooks Pvt Ltd. All Rights Reserved.</p>
+        <p class="has-text-centered">Copyright 2021-2024 &copy; ShriBooks. All Rights Reserved.</p>
       </div>
       <br/>
     </footer>
