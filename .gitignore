@@ -1,0 +1,8 @@
+/.idea/
+/themes/
+/public/
+/.sample/
+node_modules
+target/
+.hugo_build.lock
+*LICENSE.txt
